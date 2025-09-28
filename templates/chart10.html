@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart 10 - Xác suất bán hàng của Mặt hàng theo Nhóm hàng theo Tháng</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f9fa;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    .chart-container {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    svg {
+      background: #fff;
+    }
+    .tooltip {
+      position: absolute;
+      opacity: 0;
+      background: white;
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: black;
+      pointer-events: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <h2>Xác suất bán hàng của Mặt hàng theo Nhóm hàng theo Tháng</h2>
+
+  <div class="chart-container">
+    <svg id="chart10" width="1400" height="700"></svg>
+  </div>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- JS -->
+  <script src="{% static 'js/chart10.js' %}"></script>
+</body>
+</html>

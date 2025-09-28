@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Djangon Chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1ABC9C;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 2em;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #1ABC9C;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: block;
+      padding: 10px 0;
+    }
+
+    .card a:hover {
+      color: #16A085;
+    }
+  </style>
+</head>
+<body>
+
+<header>Django Chart</header>
+
+<main>
+  <div class="grid">
+    <div class="card"><a href="{% url 'chart1' %}">Chart 1: Doanh số theo mặt hàng</a></div>
+    <div class="card"><a href="{% url 'chart2' %}">Chart 2: Doanh số bán hàng theo Nhóm hàng</a></div>
+    <div class="card"><a href="{% url 'chart3' %}">Chart 3: Doanh số bán hàng theo Tháng</a></div>
+    <div class="card"><a href="{% url 'chart4' %}">Chart 4: Doanh số bán hàng trung bình theo Ngày trong tuần</a></div>
+    <div class="card"><a href="{% url 'chart5' %}">Chart 5: Doanh số bán hàng trung bình theo Ngày trong tháng</a></div>
+    <div class="card"><a href="{% url 'chart6' %}">Chart 6: Doanh số bán hàng trung bình theo Giờ trong ngày</a></div>
+    <div class="card"><a href="{% url 'chart7' %}">Chart 7: Xác suất bán hàng theo Nhóm hàng</a></div>
+    <div class="card"><a href="{% url 'chart8' %}">Chart 8: Xác suất bán hàng theo Nhóm hàng theo Tháng</a></div>
+    <div class="card"><a href="{% url 'chart9' %}">Chart 9: Xác suất Bán hàng của Mặt hàng theo Nhóm hàng</a></div>
+    <div class="card"><a href="{% url 'chart10' %}">Chart 10: Xác suất Bán hàng của Mặt hàng theo Nhóm hàng theo Tháng</a></div>
+    <div class="card"><a href="{% url 'chart11' %}">Chart 11: Phân phối Lượt mua Hàng</a></div>
+    <div class="card"><a href="{% url 'chart12' %}">Chart 12: Phân phối Mức chi trả của Khách hàng</a></div>
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart 1 - Doanh số bán hàng theo Mặt hàng</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f9fa;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    .chart-container {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    svg {
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h2>Doanh số bán hàng theo Mặt hàng</h2>
+
+  <div class="chart-container">
+    <svg id="chart" width="1400" height="700"></svg>
+  </div>
+
+  <!-- D3 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- File JS riêng cho chart 1 -->
+  <script src="{% static 'js/chart1.js' %}"></script>
+</body>
+</html>
